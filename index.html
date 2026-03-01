@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gauntlet Replica</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Gauntlet Replica</h1>
+      <p class="instructions">
+        Move with <kbd>←</kbd>/<kbd>→</kbd>, jump with <kbd>Space</kbd>. Dodge the arrows.
+      </p>
+
+      <section class="hud" aria-live="polite">
+        <div>Score: <span id="score">0</span></div>
+        <div>Best: <span id="best">0</span></div>
+        <div>Lives: <span id="lives">3</span></div>
+      </section>
+
+      <canvas id="arena" width="900" height="420" aria-label="Gauntlet game arena"></canvas>
+
+      <button id="restart" hidden>Play again</button>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
