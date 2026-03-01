@@ -1,0 +1,69 @@
+:root {
+  color-scheme: dark;
+  --bg: #0c1020;
+  --panel: #171d33;
+  --text: #e8ecff;
+  --accent: #8ad4ff;
+  --danger: #ff6f91;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(circle at top, #1b2a54 0%, var(--bg) 55%);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+}
+
+main {
+  width: min(960px, 95vw);
+  display: grid;
+  gap: 0.75rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.instructions {
+  margin: 0;
+  color: #cfdbff;
+}
+
+.hud {
+  display: flex;
+  gap: 1rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  background: color-mix(in oklab, var(--panel), black 15%);
+}
+
+canvas {
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid color-mix(in oklab, var(--accent), white 25%);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(#86cbf8 0 60%, #5c9945 60% 72%, #3e2f27 72%);
+}
+
+#restart {
+  justify-self: start;
+  border: none;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-weight: 600;
+  color: #112;
+  background: linear-gradient(90deg, #91e4ff, #b4ffde);
+  cursor: pointer;
+}
+
+#restart:hover {
+  filter: brightness(1.05);
+}
